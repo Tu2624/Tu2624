@@ -1,0 +1,557 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Toàn bộ nền trang */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #484244;
+    color: white;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-symbol {
+    font-size: 50px;
+    font-weight: bold;
+    color: #d9004c;
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.logo-text h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.logo-text p {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.search-container input {
+    padding: 7px 10px;
+    width: 300px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.user-options a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.user-options a:hover {
+    text-decoration: underline;
+}
+
+/* Menu Styles */
+nav {
+    background-color: #d9004c;
+    padding: 10px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #ff6699;
+    color: #111;
+}
+
+/* Banner Styles */
+.banner img {
+    width: 927px;
+    height: 144px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Movie Categories */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    border-bottom: 2px solid #d9004c;
+    display: inline-block;
+}
+
+/* Grid layout */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 193px);
+    grid-auto-rows: 108px;
+    gap: 15px;
+    width: 1215px;
+    margin: 0 auto;
+}
+
+/* Ảnh đầu tiên lớn */
+.movie-grid .movie-item:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    width: 406px !important;
+    height: 229px !important;
+}
+
+.movie-grid .movie-item:first-child img {
+    width: 406px !important;
+    height: 229px !important;
+    object-fit: cover;
+}
+
+/* Các ảnh còn lại */
+.movie-grid .movie-item:not(:first-child) {
+    width: 193px !important;
+    height: 108px !important;
+}
+
+.movie-grid .movie-item:not(:first-child) img {
+    width: 193px !important;
+    height: 108px !important;
+    object-fit: cover;
+}
+
+/* Common styles */
+.movie-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.movie-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    font-size: 14px;
+}
+
+/* Hover effects */
+.movie-item:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Scroll button styles */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.left-btn {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.right-btn {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Hover effect cho nút */
+.scroll-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 40px 20px;
+    color: white;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr repeat(5, 1fr);
+    gap: 20px;
+}
+
+.footer-column h3 {
+    color: #ff6b00;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    color: #ff6b00;
+}
+
+/* Logo column */
+.logo-column {
+    padding-right: 20px;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.logo-icon {
+    font-size: 24px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.site-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #999;
+}
+
+/* Copyright text */
+.footer-column ul li:last-child {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .logo-column {
+        grid-column: span 3;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .logo-column {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    .logo-column {
+        grid-column: span 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .movie-item.large {
+        height: 350px;
+    }
+    .movie-item.small {
+        height: 165px;
+    }
+}
+
+@media (max-width: 992px) {
+    .movie-item.large {
+        height: 300px;
+    }
+    .movie-item.small {
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-item.large {
+        height: 250px;
+    }
+    .movie-item.small {
+        height: 115px;
+    }
+}
+/* Thêm style cho tập phim */
+.episode-label {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: rgba(217, 0, 76, 0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 1;
+}
+
+/* Style cho nút play (thêm z-index thấp hơn) */
+.movie-item .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1; /* Đặt z-index thấp hơn nút scroll */
+}
+
+/* Đảm bảo container có position relative */
+.movie-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Điều chỉnh vị trí nút scroll */
+.left-btn {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.right-btn {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Thêm pointer-events cho movie-item */
+.movie-item {
+    position: relative;
+    pointer-events: auto;
+}
+
+/* Remove any conflicting styles */
+.movie-item::before,
+.movie-item::after {
+    display: none;
+}
+
+/* Container styles */
+.movie-container {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Grid styles */
+.movie-grid.nominated {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.movie-grid.nominated::-webkit-scrollbar {
+    display: none;
+}
+
+/* Movie item styles - Tất cả ảnh có cùng kích thước */
+.movie-grid.nominated .movie-item {
+    flex: 0 0 auto;
+    width: 193px !important;
+    height: 108px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-grid.nominated .movie-item img {
+    width: 193px !important;
+    height: 108px !important;
+    object-fit: cover;
+}
+
+/* Common styles */
+.movie-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.movie-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+}
+
+/* Scroll button styles */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.left-btn {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.right-btn {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Hover effects */
+.movie-item:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Play button styles */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.play-button::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 12px solid white;
+    border-bottom: 8px solid transparent;
+    margin-left: 3px; /* Để tam giác căn giữa hơn */
+}
+
+/* Hiện play button khi hover */
+.movie-item:hover .play-button {
+    opacity: 1;
+}
